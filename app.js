@@ -14,7 +14,7 @@ const flags = {
   styleBrown: new Rox.Flag(true)
 };
 Rox.register('assurity-demo', flags);
-await Rox.setup('<ROLLOUT_KEY>');
+Rox.setup('<ROLLOUT_KEY>');
 
 app.set('views', path.join(__dirname, 'views'));
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
