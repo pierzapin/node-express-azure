@@ -1,5 +1,12 @@
 const express = require('express');
 const router = express.Router();
+const Rox = require("rox-node");
+const flags = {
+  styleBrown: new Rox.Flag(true)
+};
+Rox.register('assurity-demo', flags);
+Rox.setup('<ROLLOUT_KEY>');
+
 
 /* GET home page. */
 router.get('/', (req, res) => {

@@ -9,13 +9,6 @@ const contact = require('./routes/contact');
 
 const app = express();
 
-const Rox = require("rox-node");
-const flags = {
-  styleBrown: new Rox.Flag(true)
-};
-Rox.register('assurity-demo', flags);
-Rox.setup('<ROLLOUT_KEY>');
-
 app.set('views', path.join(__dirname, 'views'));
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
