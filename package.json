@@ -17,6 +17,7 @@
   "devDependencies": {
     "mocha": "5.2.0",
     "chai": "4.2.0",
-    "chai-http": "4.2.0"
+    "chai-http": "4.2.0",
+    "rox-node": "4.5.3"
   }
 }

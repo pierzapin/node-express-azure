@@ -9,6 +9,9 @@ const contact = require('./routes/contact');
 
 const app = express();
 
+const Rox = require("rox-node");
+Rox.setup('<the app key goes here>');
+
 app.set('views', path.join(__dirname, 'views'));
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
