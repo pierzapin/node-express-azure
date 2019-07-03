@@ -3,9 +3,16 @@ const router = express.Router();
 
 /* GET contact page. */
 router.get('/', (req, res) => {
-  res.render('contact', {
-    title: 'Contact Us',   
-  });
+  if (global.flags.styleBrown.isEnabled()) {    
+    res.render('contact', {
+      title: 'Contact Us',  stylesheet: 'assets/css/main_alternative.css'
+    });
+  }
+  else {
+    res.render('contact', {
+      title: 'Contact Us',  stylesheet: 'assets/css/main.css'
+    });
+  }
 });
 
 module.exports = router;
