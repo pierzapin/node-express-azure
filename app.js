@@ -11,7 +11,7 @@ const app = express();
 
 const Rox = require("rox-node");
 const flags = {
-  styleBrown: new Rox.Flag(true);
+  styleBrown: new Rox.Flag(true)
 };
 Rox.register('assurity-demo', flags);
 await Rox.setup('<ROLLOUT_KEY>');
