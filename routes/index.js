@@ -1,24 +1,17 @@
 const express = require('express');
 const router = express.Router();
-const Rox = require("rox-node");
-global.flags = {
-  styleBrown: new Rox.Flag(true)
-};
-Rox.register('assurity-demo', flags);
-Rox.setup('<ROLLOUT_KEY>');
-
 
 /* GET home page. */
 router.get('/', (req, res) => {
 
-  if (global.flags.styleBrown.isEnabled()) {    
+  if (global.flags.style_brown.isEnabled()) {    
     res.render('index', {
-      title: 'Welcome to Pants Unlimited!',  stylesheet: 'assets/css/main_alternative.css'
+      title: 'Welcome to Contoso Unlimited!',  stylesheet: 'assets/css/main_alternative.css'
     });
   }
   else {
     res.render('index', {
-      title: 'Welcome to Pants Unlimited!',  stylesheet: 'assets/css/main.css'
+      title: 'Welcome to Contoso Unlimited!',  stylesheet: 'assets/css/main.css'
     });
   }
 

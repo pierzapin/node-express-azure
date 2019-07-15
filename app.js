@@ -22,3 +22,10 @@ app.use('/contact', contact);
 app.listen(config.port, () => {
   console.log(`Demo app is running on ${config.port}!`);
 });
+
+const Rox = require("rox-node");
+global.flags = {
+  style_brown: new Rox.Flag()
+};
+Rox.register('node_demo', flags);
+Rox.setup('5d27ac8a41290b646bd08d04');

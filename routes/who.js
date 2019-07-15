@@ -3,7 +3,7 @@ const router = express.Router();
 
 /* GET "who we are" page. */
 router.get('/', (req, res) => {
-  if (global.flags.styleBrown.isEnabled()) {    
+  if (global.flags.style_brown.isEnabled()) {    
     res.render('who', {
       title: 'Who We Are!',  stylesheet: 'assets/css/main_alternative.css'
     });
