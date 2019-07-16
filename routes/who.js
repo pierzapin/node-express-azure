@@ -5,12 +5,12 @@ const router = express.Router();
 router.get('/', (req, res) => {
   if (global.flags.style_brown.isEnabled()) {    
     res.render('who', {
-      title: 'Who We Are!',  stylesheet: 'assets/css/main_alternative.css'
+      title: 'Who We Are!',  stylesheet: 'assets/css/main_alternative.css', bannertext: global.env_name
     });
   }
   else {
     res.render('who', {
-      title: 'Who We Are!',  stylesheet: 'assets/css/main.css'
+      title: 'Who We Are!',  stylesheet: 'assets/css/main.css', bannertext: global.env_name
     });
   }
 });

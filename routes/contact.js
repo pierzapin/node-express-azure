@@ -5,12 +5,12 @@ const router = express.Router();
 router.get('/', (req, res) => {
   if (global.flags.style_brown.isEnabled()) {    
     res.render('contact', {
-      title: 'Contact Us',  stylesheet: 'assets/css/main_alternative.css'
+      title: 'Contact Us',  stylesheet: 'assets/css/main_alternative.css', bannertext: global.env_name
     });
   }
   else {
     res.render('contact', {
-      title: 'Contact Us',  stylesheet: 'assets/css/main.css'
+      title: 'Contact Us',  stylesheet: 'assets/css/main.css', bannertext: global.env_name
     });
   }
 });

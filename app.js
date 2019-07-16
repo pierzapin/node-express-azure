@@ -24,6 +24,8 @@ app.listen(port_config.port, () => {
   console.log(`Demo app is running on ${port_config.port}!`);
 });
 
+global.env_name = config.BannerText
+
 const Rox = require("rox-node");
 global.flags = {
   style_brown: new Rox.Flag(true)

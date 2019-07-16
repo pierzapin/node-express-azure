@@ -32,6 +32,13 @@ body {
 	line-height: 1;
 }
 
+.banner{
+	margin-bottom:0;
+	background-color: darkred;
+	text-align: center;
+}
+
+
 ol, ul {
 	list-style: none;
 }
@@ -1838,7 +1845,7 @@ input, select, textarea {
 		color: #ffffff !important;
 		cursor: pointer;
 		display: inline-block;
-		font-size: 0.6em;
+		font-size: 0.9em;
 		font-weight: bold;
 		height: calc(4.75em + 2px);
 		letter-spacing: 0.25em;
@@ -3722,7 +3729,7 @@ input, select, textarea {
 			border: 0;
 			color: rgba(255, 255, 255, 0.35);
 			display: block;
-			font-size: 0.6em;
+			font-size: 0.9em;
 			font-weight: bold;
 			letter-spacing: 0.25em;
 			line-height: 1.75;
