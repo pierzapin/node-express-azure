@@ -32,6 +32,12 @@ body {
 	line-height: 1;
 }
 
+.banner{
+	margin-bottom:0;
+	background-color: darkred;
+	text-align: center;
+}
+
 ol, ul {
 	list-style: none;
 }
