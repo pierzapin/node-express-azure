@@ -46,6 +46,7 @@ Follow my step-by-step guide: [Build Your First CI/CD Pipeline using Azure DevOp
 This walkthrough contains all the steps you should follow to fork this repo and build your own automated build and release pipeline.
 
 ## App Info
+Integrated with Rollout.io
 
 ### Author
 
