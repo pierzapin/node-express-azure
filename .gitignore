@@ -1,4 +1,7 @@
-# Logs
+#Special Config
+local_config.json
+
+# Logs¬
 logs
 *.log
 npm-debug.log*

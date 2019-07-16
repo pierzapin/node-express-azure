@@ -1,4 +1,4 @@
-const config = require('./config');
+const config = require('./config.json');
 const express = require('express');
 const path = require('path');
 const exphbs = require('express-handlebars');
@@ -12,7 +12,7 @@ const app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
-app.set('port', config.port);
+app.set('port',config.port);
 
 app.use('/', express.static('public'))
 app.use('/', index);
@@ -28,4 +28,4 @@ global.flags = {
   style_brown: new Rox.Flag()
 };
 Rox.register('node_demo', flags);
-Rox.setup('5d27ac8a41290b646bd08d04');
+Rox.setup(config.FlagKey)
