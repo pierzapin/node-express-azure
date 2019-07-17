@@ -55,7 +55,7 @@ Mike Pfeiffer
 
 ### Version
 
-1.0.0
+1.1.4
 
 ### License
 
