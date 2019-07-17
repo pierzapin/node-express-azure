@@ -18,7 +18,9 @@ router.get('/', (req, res) => {
   }
   else {
     res.render('index', {
-      title: 'Welcome to Contoso Unlimited!',  stylesheet: 'assets/css/main.css', bannertext: global.env_name
+      title: 'Welcome to Contoso Unlimited!',  
+      stylesheet: 'assets/css/main.css', 
+      bannertext: bannerhtml 
     });
   }
 
