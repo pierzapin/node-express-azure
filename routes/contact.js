@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+bannerhtml = '';
 
 /* GET contact page. */
 router.get('/', (req, res) => {
@@ -12,14 +13,14 @@ router.get('/', (req, res) => {
     res.render('contact', {
       title: 'Contact Us',  
       stylesheet: 'assets/css/main_alternative.css', 
-      bannertext: bannerhtml
+      banner: bannerhtml
     });
   }
   else {
     res.render('contact', {
       title: 'Contact Us',  
       stylesheet: 'assets/css/main.css', 
-      bannertext: bannerhtml
+      banner: bannerhtml
     });
   }
 });
