@@ -8,7 +8,6 @@ trigger:
 
 pool:
   name: default
-  #vmImage: 'ubuntu-latest'
 
 steps:
 - task: vsts-habitat-install@3
