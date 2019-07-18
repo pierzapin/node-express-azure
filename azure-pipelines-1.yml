@@ -13,6 +13,11 @@ pool:
 steps:
 - task: vsts-habitat-install@3
   displayName: 'Install Habitat'
+
+- task: vsts-habitat-signing-key@3
+  inputs:
+    habitatOrigin: assurity_tools
+  displayName: 'Set Habitat Origin'
     
 - task: NodeTool@0
   inputs:
@@ -23,3 +28,9 @@ steps:
     npm install
     npm run build
   displayName: 'npm install and build'
+
+- task: vsts-habitat-build@3
+  inputs:
+    habitatPlanContext: habitat
+    habitatSrcPath: $(Build.SourcesDirectory)
+  displayName: 'Habitat Build'
