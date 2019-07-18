@@ -33,4 +33,5 @@ steps:
   inputs:
     habitatPlanContext: habitat
     habitatSrcPath: $(Build.SourcesDirectory)
+    habitatOrigin: HabitatConnection
   displayName: 'Habitat Build'
