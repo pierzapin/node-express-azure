@@ -31,7 +31,7 @@ steps:
 - task: vsts-habitat-build@3
   inputs:
     habitatPlanContext: habitat
-    habitatSrcPath: $(Build.SourcesDirectory)
+    habitatSrcPath: /src
     habitatOrigin: HabitatConnection
   displayName: 'Habitat Build'
 
