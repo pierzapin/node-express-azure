@@ -16,7 +16,7 @@ steps:
 
 - task: vsts-habitat-signing-key@3
   inputs:
-    habitatOrigin: assurity_tools
+    habitatOrigin: HabitatConnection
   displayName: 'Set Habitat Origin'
     
 - task: NodeTool@0
