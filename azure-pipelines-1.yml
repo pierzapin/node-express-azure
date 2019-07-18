@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  name: default
+  name: SelfHostedPool
 
 steps:
 - task: vsts-habitat-install@3
