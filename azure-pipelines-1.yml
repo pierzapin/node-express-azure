@@ -11,6 +11,9 @@ pool:
   #vmImage: 'ubuntu-latest'
 
 steps:
+- task: vsts-habitat-install@3
+  displayName: 'Install Habitat'
+    
 - task: NodeTool@0
   inputs:
     versionSpec: '10.x'
