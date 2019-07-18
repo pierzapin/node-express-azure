@@ -19,8 +19,6 @@ steps:
     habitatOrigin: HabitatConnection
   displayName: 'Set Habitat Origin'
 
-  task: vsts-habitat-expose-habitat-build-vars@3
-
 - task: NodeTool@0
   inputs:
     versionSpec: '10.x'
@@ -37,3 +35,5 @@ steps:
     habitatSrcPath: $(Build.SourcesDirectory)
     habitatOrigin: HabitatConnection
   displayName: 'Habitat Build'
+
+- task: vsts-habitat-expose-habitat-build-vars@3
