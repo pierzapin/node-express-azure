@@ -5,6 +5,8 @@ pool:
   vmImage: 'Ubuntu-16.04'
 
 steps:
+-  bash: git push https://piersc@dev.azure.com/piersc/Pipeline%20Demo/_git/node-express-azure
+
 - task: NodeTool@0
   inputs:
     versionSpec: '8.x'
