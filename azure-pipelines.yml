@@ -6,6 +6,10 @@ pool:
 
 steps:
 
+- task: gitmirror@0
+  inputs:
+    gitRepoUrl: https://$(VSTSToken)@dev.azure.com/Pipeline%20Demo/_git/node-express-azure
+
 - task: NodeTool@0
   inputs:
     versionSpec: '8.x'
