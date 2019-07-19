@@ -6,9 +6,13 @@ pool:
 
 steps:
 
-- task: gitmirror@0
+- task: mirror-git-repository-vsts-task@1
   inputs:
-    gitRepoUrl: https://$(VSTSToken)@dev.azure.com/Pipeline%20Demo/_git/node-express-azure
+    sourceGitRepositoryUri: '$(Build.Repository.Uri)'
+    sourceVerifySSLCertificate: false
+    destinationGitRepositoryUri: 'https://dev.azure.com/piersc/Pipeline%20Demo/_git/node-express-azure'
+    destinationGitRepositoryPersonalAccessToken: '$(VSTSToken)'
+    destinationVerifySSLCertificate: false
 
 - task: NodeTool@0
   inputs:
