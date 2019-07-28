@@ -7,12 +7,15 @@ pipeline {
 
   }
   stages {
-    stage('Stage1') {
+    stage('Delay') {
       steps {
         sleep(time: 1000, unit: 'MICROSECONDS')
       }
     }
     stage('NPM') {
+      environment {
+        CI = 'true'
+      }
       steps {
         sh '''npm install
 npm test
