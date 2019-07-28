@@ -12,9 +12,10 @@ pipeline {
         sleep(time: 1000, unit: 'MICROSECONDS')
       }
     }
-    stage('') {
+    stage('NPM') {
       steps {
         sh '''npm install
+npm test
 '''
       }
     }
