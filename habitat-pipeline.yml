@@ -8,8 +8,7 @@ trigger:
 - master
 
 pool:
-  name: default
-  #vmImage: 'ubuntu-latest'
+  name: SelfHostedPool
 
 steps:
 - task: vsts-habitat-install@3
@@ -19,7 +18,7 @@ steps:
   inputs:
     habitatOrigin: HabitatConnection
   displayName: 'Set Habitat Origin'
-    
+
 - task: NodeTool@0
   inputs:
     versionSpec: '10.x'
@@ -33,6 +32,8 @@ steps:
 - task: vsts-habitat-build@3
   inputs:
     habitatPlanContext: habitat
-    habitatSrcPath: $(Build.SourcesDirectory)
+    habitatSrcPath: /src
     habitatOrigin: HabitatConnection
   displayName: 'Habitat Build'
+
+- task: vsts-habitat-expose-habitat-build-vars@3

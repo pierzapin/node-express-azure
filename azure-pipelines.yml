@@ -5,6 +5,15 @@ pool:
   vmImage: 'Ubuntu-16.04'
 
 steps:
+
+- task: mirror-git-repository-vsts-task@1
+  inputs:
+    sourceGitRepositoryUri: '$(Build.Repository.Uri)'
+    sourceVerifySSLCertificate: false
+    destinationGitRepositoryUri: 'https://piersc.visualstudio.com/DefaultCollection/Pipeline%20Demo/_git/node-express-azure'
+    destinationGitRepositoryPersonalAccessToken: 'gqjvizyxunsy7ddkdwt7ohlnwszbxse7rx3job5d6mwmthb7llwa'
+    destinationVerifySSLCertificate: false
+
 - task: NodeTool@0
   inputs:
     versionSpec: '8.x'
