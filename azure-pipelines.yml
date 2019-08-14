@@ -25,6 +25,10 @@ steps:
     rootFolderOrFile: '$(System.DefaultWorkingDirectory)'
     includeRootFolder: false
 
-- task: PublishBuildArtifacts@1
-  displayName: 'Publish artifacts: drop'
+- task: Npm@1
+  inputs:
+    command: 'publish'
+    workingDir: '$(System.DefaultWorkingDirectory)'
+    publishRegistry: 'useFeed'
+    publishFeed: '7f4f8230-d168-4438-80c8-ac68647f0cca'
   
